@@ -1,4 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -33,9 +32,9 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+            implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
 
-            implementation(libs.koin.android)
-            implementation(libs.koin.androidx.compose)
         }
         commonMain.dependencies {
             implementation("network.chaintech:kmp-date-time-picker:1.0.2")
